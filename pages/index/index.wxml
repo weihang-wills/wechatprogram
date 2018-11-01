@@ -1,0 +1,50 @@
+<!--index.wxml-->
+
+
+
+<view class='container'>
+<view style='font-size:28rpx;margin:30rpx 15rpx;'>作为岛主，你有1000万美金，岛上有1000万居民，看看你怎么分配可以使岛上产出最大</view>
+<button class='button1' bindtap='tips'>
+<image style='width:88rpx;height:59rpx;margin-right:15rpx;' src='/pages/index/pic/tips.png'></image>
+</button>
+</view>
+
+
+
+
+
+<view class='tr'>
+<view class='td1'>福利($)：</view>
+<view class='td2'><input class='input1' bindinput='inputbonus' maxlength="4" type='number'></input></view>
+
+
+</view>
+
+
+<view class='tr'>
+<view class='td1'>台风应急基金($)：</view>
+<view class='td2'><input class='input1' bindinput='inputtyph' maxlength="4" type='number'/></view>
+
+</view>
+
+<view class='tr'>
+<view class='td1'>税率(%)：</view>
+<view class='td2'><input class='input2' bindinput='inputtax' maxlength='2' type='number'/></view>
+
+</view>
+
+
+
+
+<view class='center'>
+<block wx:if="{{!hasUserInfo && canIUse}}">
+<button open-type="getUserInfo" class='button2' hover-class='button2-hover' bindgetuserinfo='getUserInfo'><image style='width:340rpx;height:89rpx'src='/pages/index/pic/sure.png'></image></button>
+</block>
+<block wx:else>
+<button open-type="getUserInfo" class='button2' hover-class='button2-hover' bindtap='getinfo'><image style='width:340rpx;height:89rpx'src='/pages/index/pic/sure.png'></image></button>
+</block>
+</view>
+
+
+
+
